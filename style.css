@@ -1,0 +1,79 @@
+* {
+    margin: 50;
+    padding: 0;
+    box-sizing: flex;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+#resultado {
+    font-size: 1.5rem;   /* Fica maior */
+    margin: 20px 0;      /* Dá um espaço dos botões */
+    font-weight: bold;   /* Destaca o texto */
+    min-height: 2rem;    /* Reserva um espaço para o texto não pular */
+}
+.hero {
+    text-align: center;
+    justify-content: center
+}
+h1{
+    margin: ;
+}
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* O estilo circular do botão */
+.btn-escolha {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; /* Faz o círculo */
+    border: 4px solid #182d5c;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    flex-wrap: wrap;
+    
+}
+
+.btn-escolha:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+/* Ajuste importante para as imagens não estourarem o círculo */
+.btn-escolha img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.btn-escolha span {
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+
+#pedra { background-color: #ffc5ee !important; }
+#papel { background-color: #c6d8ff !important; }
+#tesoura { background-color: #bbfce4 !important; }
+#resultado {
+  transition: color 0.3s;
+}
+
+#resultado.vitoria  { color: green; }
+#resultado.derrota  { color: red;   }
+#resultado.empate   { color: orange; }
